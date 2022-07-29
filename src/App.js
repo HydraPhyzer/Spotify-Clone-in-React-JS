@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
-import Login from './Components/Login';
+import Login from './Components/Login/Login';
 import { GetToken } from './Components/Spotify';
 import Player from './Components/Player';
 
