@@ -1,0 +1,7 @@
+.Body
+{
+    flex: 0.8;
+    padding: 15px;
+    color: white;
+    background: linear-gradient(to bottom  , #213263 , rgb(65, 64, 64));
+}

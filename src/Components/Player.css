@@ -1,0 +1,9 @@
+.Player
+{
+    height: 100vh;
+}
+.Main
+{
+    display: flex;
+    height: 90vh;
+}

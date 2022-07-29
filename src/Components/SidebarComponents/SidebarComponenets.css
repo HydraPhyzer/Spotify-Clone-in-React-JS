@@ -1,0 +1,23 @@
+.SidebarComponents
+{
+    display: flex;
+    margin:15px 0px;
+    align-items: center;
+
+    color: grey;
+    transition: all 0.2s ease;
+}
+.SidebarComponents:hover
+{
+    color: white;
+    cursor: pointer;
+}
+.SidebarComponents .SidebarIcon
+{
+    margin: 0px 20px 0px 0px;
+}
+.SidebarComponents h6
+{
+    margin-bottom: none;
+    font-size:.9rem;
+}

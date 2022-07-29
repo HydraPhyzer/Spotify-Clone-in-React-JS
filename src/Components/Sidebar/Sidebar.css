@@ -1,0 +1,33 @@
+.Sidebar
+{
+    background-color: black;
+    color: white;
+    flex: 0.2;
+    padding: 15px;
+    overflow-x: overlay;
+}
+.Sidebar::-webkit-scrollbar
+{
+    display: none;
+}
+.SidebarLogo img
+{
+    height: 70px;
+    object-fit: contain;
+}
+
+.Row
+{
+    padding: 2px 0px;
+    border-radius: 5px;
+    background-color: white;
+}
+.Comp2
+{
+    padding-top: 15px;
+}
+.Comp3
+{
+    padding-top: 0px;
+    margin: 0px;
+}
