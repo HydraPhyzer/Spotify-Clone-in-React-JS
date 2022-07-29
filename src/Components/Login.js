@@ -1,14 +1,18 @@
 import React from 'react'
 import './Login.css'
+import {LogInURL } from './Spotify'
 
 const Login = () => {
+  
+
+
   return (
     <div className='Login'>
-        <div className="Image">
-            <img src="./Logo/OnScreenLogo.jpg" alt="" />
-        </div>
+      <div className="Image">
+        <img src="./Logo/OnScreenLogo.jpg" alt="" />
+      </div>
 
-        <button>Login With Spotify</button>
+      <a href={LogInURL}>Login With Spotify</a>
     </div>
   )
 }

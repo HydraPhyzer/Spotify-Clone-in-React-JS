@@ -11,13 +11,14 @@
 {
     object-fit: contain;
 }
-.Login button
+.Login a
 {
     border: none;
     background-color: #1DB954;
     border-radius: 99px;
     padding: 20px;
     color: white;
+    text-decoration: none;
 }
 
 @media (max-width:830px)
@@ -42,7 +43,7 @@
     {
         height: 30%;
     }
-    .Login button
+    .Login a
     {
         padding: 15px;
     }
