@@ -7,10 +7,21 @@ let InitialState=
 
 let Reducer=(state=InitialState,action)=>
 {
-    switch (action.Type) {
+    switch (action.type) {
+        case "SET-TOKEN":
+            return{
+                ...state,
+                Token:action.Token,
+            }
         case "SET-USER":
             return{
                 ...state,
+                User:action.User
+            }
+        case "SET-PLAYLIST":
+            return{
+                ...state,
+                Playlist:action.Playlist,
             }
         default:
             return state;

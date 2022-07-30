@@ -3,8 +3,6 @@ import './Login.css'
 import {LogInURL } from '../Spotify'
 
 const Login = () => {
-  
-
 
   return (
     <div className='Login'>

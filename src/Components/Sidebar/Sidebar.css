@@ -31,3 +31,7 @@
     padding-top: 0px;
     margin: 0px;
 }
+.Comp1 , .Comp2 , .Comp3 , hr
+{
+    margin-left: 15px;
+}
