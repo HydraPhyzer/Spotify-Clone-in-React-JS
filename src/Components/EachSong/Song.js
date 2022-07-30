@@ -33,6 +33,7 @@ const Song = ({ID,Index,Image ,Length,Datez,Album,Singer,Name}) => {
                     Over===true?<PlayArrow onClick={()=>{
                         Spotify.getTrack(ID).then((Track)=>
                         {
+                            console.log(Spotify.play())
                             Dispatch(SETTRACK(Track))
                         })
                     }}/>:Index
