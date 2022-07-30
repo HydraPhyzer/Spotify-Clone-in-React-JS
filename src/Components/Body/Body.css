@@ -5,3 +5,60 @@
     color: white;
     background: linear-gradient(to bottom  , #213263 , rgb(65, 64, 64));
 }
+.BelowNav
+{
+    margin-top: 10px;
+}
+.Playlist img
+{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.Playlist
+{
+    display: flex;
+}
+.Details
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Info
+{
+    margin-bottom: 0px;
+}
+.Details p
+{
+    margin-bottom: 0px;
+}
+.PlaylistName h1
+{
+    font-size:80px;
+    font-weight: bolder;
+}
+.Line1, .Line2
+{
+    font-size: small;
+    color: rgb(175, 170, 170);
+}
+.Line1
+{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.Info
+{
+    letter-spacing: 1px;
+}
+.Navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}

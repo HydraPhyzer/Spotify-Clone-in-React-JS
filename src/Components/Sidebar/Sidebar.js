@@ -35,6 +35,9 @@ const Sidebar = () => {
 
       <div className='Comp3'>
         {
+          console.log(AllPlaylist)
+        }
+        {
             AllPlaylist?
             AllPlaylist.map((Single,Ind) => {
               return(
