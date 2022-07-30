@@ -1,7 +1,56 @@
 .Footer
 {
-    padding: 15px;
+    padding: 0px 15px;
     background-color: #181818;
+    /* background-color: red; */
     height: 10vh;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Current
+{
+    display: flex;
+    align-items: center;
+}
+.Current img
+{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.CurrentInfo
+{
+    font-size: 0.8rem;
+}
+
+.Volums
+{
+    display: flex;
+    align-items: center;
+
+}
+.Slider
+{
+    margin: 0;
+    padding: 0;
+    height: 3px;
+}
+.Controls *
+{
+    margin: 10px;
+    color: grey;
+}
+.PlayerIcon
+{
+    color: white !important;
+    font-size: xx-large !important;
+}
+.PlayerIcon:hover
+{
+    transition: all 0.2s ease;
+    transform: scale(1.2);
 }
