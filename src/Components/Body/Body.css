@@ -4,6 +4,11 @@
     padding: 15px;
     color: white;
     background: linear-gradient(to bottom  , #213263 , rgb(65, 64, 64));
+    overflow-y:scroll;
+}
+.Body::-webkit-scrollbar
+{
+    display: none;
 }
 .BelowNav
 {
@@ -66,4 +71,8 @@
 {
     font-weight:400;
     color: rgb(175, 170, 170);
+}
+.Songs
+{
+    margin-top: 20px;
 }

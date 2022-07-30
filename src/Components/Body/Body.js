@@ -2,6 +2,7 @@ import React from 'react'
 import './Body.css'
 import Navbar from '../Navbar/Navbar'
 import { useSelector } from 'react-redux'
+import Song from '../EachSong/Song'
 
 const Body = () => {
   let State=useSelector((state)=>
@@ -9,14 +10,10 @@ const Body = () => {
     return state.Reducer;
   })
   let Target=State.SinglePlaylist;
-
   return (
     <div className='Body'>
       <Navbar/>
 
-{
-  console.log(Target)
-}
       {Object.keys(Target).length>0?
         <div className="BelowNav">
         <div className="Playlist">
@@ -42,7 +39,24 @@ const Body = () => {
             </div>
           </div>
         </div>
+
+
+        <div className="Songs">
+          {
+            Target.tracks.items.map((Item,In)=>
+            {
+              return(
+                <Song Index={In} Image={Item?.track?.album?.images[0]?.url} Length={Item.track.duration_ms} Datez={Item.added_at} Album={Item.track.album.name} Singer={Item.track.artists[0].name} Name={Item.track.name} key={In}/>
+            )})
+          }
+        </div>
+
       </div>:""}
+
+      {/* {
+        console.log(Target.tracks.items)
+      } */}
+
     </div>
   )
 }
