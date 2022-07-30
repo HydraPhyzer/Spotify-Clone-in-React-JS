@@ -3,6 +3,8 @@ let InitialState=
     User:"null",
     Playlist:[],
     Token:"",
+    SinglePlaylistID:"",
+    SinglePlaylist:{},
 }
 
 let Reducer=(state=InitialState,action)=>
@@ -22,6 +24,16 @@ let Reducer=(state=InitialState,action)=>
             return{
                 ...state,
                 Playlist:action.Playlist,
+            }
+        case "SET-SINGLE-PLAYLIST-ID":
+            return{
+                ...state,
+                SinglePlaylistID:action.SinglePlaylistID,
+            }
+        case "SET-SINGLE-PLAYLIST":
+            return{
+                ...state,
+                SinglePlaylist:action.SinglePlaylist,
             }
         default:
             return state;

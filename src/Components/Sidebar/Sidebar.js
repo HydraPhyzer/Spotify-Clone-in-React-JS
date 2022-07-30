@@ -6,9 +6,10 @@ import SearchIcon from '@material-ui/icons/Search';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import Favorite from '@material-ui/icons/Favorite';
-import { useSelector } from 'react-redux';
+import { useSelector} from 'react-redux';
 
 const Sidebar = () => {
+  
   let State = useSelector((state) => {
     return state.Reducer;
   })
@@ -35,13 +36,10 @@ const Sidebar = () => {
 
       <div className='Comp3'>
         {
-          console.log(AllPlaylist)
-        }
-        {
             AllPlaylist?
             AllPlaylist.map((Single,Ind) => {
               return(
-                <SidebarComponenets key={Ind} Title={Single.name} />
+                <SidebarComponenets PID={Single.id} key={Ind} Title={Single.name} />
               )
             }):""
         }

@@ -19,3 +19,17 @@ export let SETPLAYLIST=(Lists)=>
         Playlist:Lists,
     }   
 }
+export let SETSINGLEPLAYLISTID=(ID)=>
+{
+    return{
+        type:"SET-SINGLE-PLAYLIST-ID",
+        SinglePlaylistID:ID,
+    }   
+}
+export let SETSINGLEPLAYLIST=(List)=>
+{
+    return{
+        type:"SET-SINGLE-PLAYLIST",
+        SinglePlaylist:List,
+    }   
+}

@@ -5,7 +5,7 @@ import Body from '../Body/Body'
 import Footer from '../Footer/Footer'
 import { useSelector } from 'react-redux';
 import SpotifyWebApi from 'spotify-web-api-js'
-import {SETUSER,SETPLAYLIST} from '../Redux/Actions'
+import {SETUSER,SETPLAYLIST, SETSINGLEPLAYLIST,SETSINGLEPLAYLISTID } from '../Redux/Actions'
 import {useDispatch} from 'react-redux'
 
 let Spotify=new SpotifyWebApi();
@@ -30,7 +30,17 @@ const Player = () => {
       Dispatch(SETPLAYLIST(Playlist));
     })
 
+    Dispatch((SETSINGLEPLAYLISTID("6yMHdDE3Uo7NUNm75o22G5")))
+
   },[])
+
+  useEffect(()=>
+  {
+    Spotify.getPlaylist(State.SinglePlaylistID).then((Play)=>
+    {
+      Dispatch(SETSINGLEPLAYLIST(Play))
+    })
+  },[State.SinglePlaylistID])
 
   return (
     <div className='Player'>

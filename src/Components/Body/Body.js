@@ -8,15 +8,20 @@ const Body = () => {
   {
     return state.Reducer;
   })
+  let Target=State.SinglePlaylist;
 
   return (
     <div className='Body'>
       <Navbar/>
 
-      <div className="BelowNav">
+{
+  console.log(Target)
+}
+      {Object.keys(Target).length>0?
+        <div className="BelowNav">
         <div className="Playlist">
           <div className="Image">
-            {State.Playlist.items?<img src={State.Playlist.items[2].images[0].url} alt="" />:""}
+          <img src={Target?.images[0]?.url} alt="" />
           </div>
 
           <div className="Details">
@@ -25,19 +30,19 @@ const Body = () => {
             </div>
 
             <div className="PlaylistName">
-              <h1>My Savage</h1>
+              <h1>{Target.name}</h1>
             </div>
 
             <div className="Info">
-              <h6 className='Line2'>Born To Shine</h6>
+              <h6 className='Line2'>{Target.description}</h6>
               <p>
-                <strong>ZUBAIR GUJJAR . </strong>
-                319 Songs
+                <span>{Target.owner? Target.owner.display_name:""} . </span>
+                <span className='Count'>{Target.tracks? Target.tracks.total:""} Songs</span>
                 </p>
             </div>
           </div>
         </div>
-      </div>
+      </div>:""}
     </div>
   )
 }
