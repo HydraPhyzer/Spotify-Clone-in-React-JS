@@ -31,9 +31,9 @@
 .Index
 {
     color: white;
-    margin-right: 20px;
     margin-left: 5px;
     text-align: center;
+    width: 5%;
 }
 .Date,.Duration
 {

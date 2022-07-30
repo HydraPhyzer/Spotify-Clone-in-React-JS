@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import {LogInURL } from '../Spotify'
+import { useSelector } from 'react-redux'
 
 const Login = () => {
-
+  
   return (
     <div className='Login'>
       <div className="Image">

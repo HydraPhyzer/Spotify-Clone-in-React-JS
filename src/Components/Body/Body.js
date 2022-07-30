@@ -46,7 +46,7 @@ const Body = () => {
             Target.tracks.items.map((Item,In)=>
             {
               return(
-                <Song Index={In} Image={Item?.track?.album?.images[0]?.url} Length={Item.track.duration_ms} Datez={Item.added_at} Album={Item.track.album.name} Singer={Item.track.artists[0].name} Name={Item.track.name} key={In}/>
+                <Song Index={In} Image={Item?.track?.album?.images[0]?.url} Length={Item.track.duration_ms} Datez={Item.added_at} Album={Item.track.album.name} Singer={Item.track.artists[0].name} Name={Item.track.name} key={In} ID={Item.track.id}/>
             )})
           }
         </div>

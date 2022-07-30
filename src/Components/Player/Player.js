@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,createContext, useContext } from 'react'
 import './Player.css'
 import Sidebar from '../Sidebar/Sidebar'
 import Body from '../Body/Body'
@@ -9,7 +9,8 @@ import {SETUSER,SETPLAYLIST, SETSINGLEPLAYLIST,SETSINGLEPLAYLISTID } from '../Re
 import {useDispatch} from 'react-redux'
 
 let Spotify=new SpotifyWebApi();
-const Player = () => {
+let PlayerContext=createContext();
+const Player = ({children}) => {
   let Dispatch=useDispatch();
   let State=useSelector((state)=>
   {
@@ -44,14 +45,17 @@ const Player = () => {
 
   return (
     <div className='Player'>
+      <PlayerContext.Provider value={Spotify}>
 
-      <div className="Main">
-        <Sidebar/>
-        <Body/>
-      </div>
-      <Footer/>
+        <div className="Main">
+        {children}
+          <Sidebar/>
+          <Body/>
+        </div>
+        <Footer/>
+      </PlayerContext.Provider>
     </div>
   )
 }
 
-export default Player
+export {Player,PlayerContext}

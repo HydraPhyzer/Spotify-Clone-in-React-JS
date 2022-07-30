@@ -5,6 +5,7 @@ let InitialState=
     Token:"",
     SinglePlaylistID:"",
     SinglePlaylist:{},
+    Track:{}
 }
 
 let Reducer=(state=InitialState,action)=>
@@ -34,6 +35,11 @@ let Reducer=(state=InitialState,action)=>
             return{
                 ...state,
                 SinglePlaylist:action.SinglePlaylist,
+            }
+        case "SET-TRACK":
+            return{
+                ...state,
+                Track:action.Track,
             }
         default:
             return state;

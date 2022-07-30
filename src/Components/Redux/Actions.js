@@ -33,3 +33,10 @@ export let SETSINGLEPLAYLIST=(List)=>
         SinglePlaylist:List,
     }   
 }
+export let SETTRACK=(Track)=>
+{
+    return{
+        type:"SET-TRACK",
+        Track:Track,
+    }   
+}
